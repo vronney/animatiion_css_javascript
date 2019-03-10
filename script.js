@@ -13,5 +13,13 @@ function handlePresentationClick(e) {
     if (next) {
         current.classList.remove('active');
         next.classList.add('active');
+
+        var aa = parseInt(next.getAttribute('data-autoadvance'));
+
+        if (!isNaN(aa)) {
+            setTimeout(function (e) {
+                handlePresentationClick(e);
+            }, aa);
+        }
     }
 }
