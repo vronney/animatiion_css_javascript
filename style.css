@@ -74,14 +74,17 @@ hp-chooser.chosen > *:not(.chosen) {
     max-width: 16.6%;
     animation-name: unchosen;
     animation-duration: .5s;
+    opacity: .25;
 }
 
 @keyframes unchosen {
     from {
         max-width: 20%;
+        opacity: 1;
     }
     to {
         max-width: 16.6%;
+        opacity: .25;
     }
 }
 
