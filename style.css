@@ -54,4 +54,12 @@ hp-chooser * {
     margin: 5% 2.5%;
 }
 
+hp-chooser.chosen > *.chosen {
+    max-width: 30%;
+}
+
+hp-chooser.chosen > *:not(.chosen) {
+    max-width: 16.6%;
+}
+
 
