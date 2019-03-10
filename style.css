@@ -98,7 +98,7 @@ hp-chooser.chosen > *:not(.chosen) {
     opacity: .25;
 }
 
-hp-chooser.fixed>*:not(.chosen) {
+hp-chooser.fixed > *:not(.chosen) {
     max-width: 0%;
     opacity: .25;
     animation-name: unchosen_fixed;
@@ -114,7 +114,7 @@ hp-chooser.fixed>*:not(.chosen) {
     }
 }
 
-hp-chooser.chosen.animate>*:not(.chosen) {
+hp-chooser.chosen.animate > *:not(.chosen) {
     animation-name: unchosen;
     animation-duration: .5s;
     animation-timing-function: linear;
@@ -130,5 +130,31 @@ hp-chooser.chosen.animate>*:not(.chosen) {
         opacity: .25;
     }
 }
+
+hp-learn {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+hp-learn hp-learn-no,
+hp-learn hp-learn-yes {
+    max-width: 20%;
+}
+
+hp-learn img {
+    max-width: 50%;
+    transition-property: margin;
+    transition-duration: .5s;
+}
+
+hp-learn-no,
+hp-learn-yes {
+    display: none;
+}
+
 
 

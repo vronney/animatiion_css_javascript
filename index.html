@@ -13,40 +13,49 @@
        
 </head>
 <body>
-<hp-content>
-    <hp-presentation>
-         <hp-slide class="active">
-            <hp-title>Which shape</hp-title>
-            <hp-chooser>
-                <img src="images/triangle.svg">
-                <img src="images/circle.svg">
-                <img src="images/diamond.svg">
-                <img src="images/square.svg">
-            </hp-chooser>
-            <hp-title>doesn't belong?</hp-title>
-        </hp-slide>
-        <hp-slide data-autoadvance="3500">
-            <hp-title>Which shape</hp-title>
-            <hp-chooser class="chosen animate">
-                <img src="images/triangle.svg">
-                <img class="chosen" src="images/circle.svg">
-                <img src="images/diamond.svg">
-                <img src="images/square.svg">
-            </hp-chooser>
-            <hp-title>doesn't belong?</hp-title>
-        </hp-slide>
-        <hp-slide>
-            <hp-title>How did</hp-title>
-            <hp-chooser class="fixed">
-                <img src="images/triangle.svg">
-                <img class="chosen" src="images/circle.svg">
-                <img src="images/diamond.svg">
-                <img src="images/square.svg">
-            </hp-chooser>
-            <hp-title>you know?</hp-title>
-        </hp-slide>
-    </hp-presentation>
-</hp-content>
-<script src="script.js"></script>
+    <hp-content>
+        <hp-presentation>
+            <hp-slide class="active">
+                <hp-title>Which shape</hp-title>
+                <hp-chooser>
+                    <img src="images/triangle.svg" />
+                    <img src="images/circle.svg" />
+                    <img src="images/diamond.svg" />
+                    <img src="images/square.svg" />
+                </hp-chooser>
+                <hp-title>doesn't belong?</hp-title>
+            </hp-slide>
+            <hp-slide data-autoadvance="3500">
+                <hp-title>Which shape</hp-title>
+                <hp-chooser class="chosen animate">
+                    <img src="images/triangle.svg" />
+                    <img class="chosen" src="images/circle.svg" />
+                    <img src="images/diamond.svg" />
+                    <img src="images/square.svg" />
+                </hp-chooser>
+                <hp-title>doesn't belong?</hp-title>
+            </hp-slide>
+            <hp-slide data-autoadvance="animationend">
+                <hp-title>How did</hp-title>
+                <hp-chooser class="fixed">
+                    <img src="images/triangle.svg" />
+                    <img class="chosen" src="images/circle.svg" />
+                    <img src="images/diamond.svg" />
+                    <img src="images/square.svg" />
+                </hp-chooser>
+                <hp-title>you know?</hp-title>
+            </hp-slide>
+            <hp-slide data-autoadvance="3500">
+                <hp-title>How did</hp-title>
+                <hp-learn class="match">
+                    <hp-learn-no>no</hp-learn-no>
+                    <img src="images/circle.svg">
+                    <hp-learn-yes>yes</hp-learn-yes>
+                </hp-learn>
+                <hp-title>you know?</hp-title>
+            </hp-slide>
+        </hp-presentation>
+    </hp-content>
+    <script src="script.js"></script>
 </body>
 </html>
