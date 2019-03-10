@@ -13,6 +13,14 @@ hp-content {
     align-items: center;
 }
 
+hp-presentation > hp-slide {
+    display: none;
+}
+
+hp-presentation > hp-slide.active {
+    display: inline-block;
+}
+
 hp-presentation {
     display: block;
     width: 80vmin;

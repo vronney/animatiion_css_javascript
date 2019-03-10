@@ -12,6 +12,6 @@ In a world without Flash, mixed-mode animation is a powerful tool for web design
 - DOM manipulation
 
 ## How to run
-- Make sure to have Python SimeplHTTPServer installed
+- Make sure to have Python SimpleHTTPServer installed
 - In command line: python -m http.server
 - In browser: localhost:8000
