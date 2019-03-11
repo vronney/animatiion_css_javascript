@@ -15,3 +15,5 @@ In a world without Flash, mixed-mode animation is a powerful tool for web design
 - Make sure to have Python SimpleHTTPServer installed
 - In command line: python -m http.server
 - In browser: localhost:8000
+- Link to Now Server: [Click](https://animationcssjavascript-jnqvczha8.now.sh)
+
