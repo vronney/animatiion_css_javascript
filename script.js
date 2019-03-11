@@ -46,6 +46,34 @@ function handleAnimationEnd(e) {
     }
 }
 
+function setLearnImage(imageName) {
+    var img = document.querySelector('hp-slide.active hp-learn img');
+    img.src = 'images/' + imageName + '.svg';
+}
+
+var shapes = ['circle', 'diamond', 'square', 'triangle'];
+
+function showLearning() {
+    var ii = Math.floor(Math.random() * shapes.length);
+    setLearnImage(shapes[ii]);
+
+    var slide = document.querySelector('hp-slide.active');
+    slide.classList.remove('learn-yes');
+    slide.classList.remove('learn-no');
+    slide.classList.add(ii ? 'learn-no' : 'learn-yes');
+}
+
+function startLearning(learningDelay) {
+    showLearning();
+    setTimeout(function() {
+        if (learningDelay > 1.1) {
+        showLearning();
+        learningDelay = Math.pow(learningDelay, 1/1.05);
+        startLearning(learningDelay);
+        }
+    }, learningDelay);
+}
+
 function runLearningSequence() {
-    console.log('in runLearningSequence');
+    startLearning(1500);
 }
