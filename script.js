@@ -17,12 +17,22 @@ function handlePresentationClick(e) {
         current.classList.remove('active');
         next.classList.add('active');
 
+        next.querySelectorAll('.match').forEach(function (el) {
+            setTimeout (function () {
+                el.classList.remove('match');
+            }, 0);
+        });
         var aa = parseInt(next.getAttribute('data-autoadvance'));
 
         if (!isNaN(aa)) {
             setTimeout(function (e) {
                 handlePresentationClick(e);
             }, aa);
+        }
+
+        var osa = next.getAttribute('data-onshow');
+        if (osa) {
+            window[osa]();
         }
     }
 }
@@ -34,4 +44,8 @@ function handleAnimationEnd(e) {
     if (aa == 'animationend' && slide.classList.contains('active')) {
         handlePresentationClick(e);
     }
+}
+
+function runLearningSequence() {
+    console.log('in runLearningSequence');
 }
