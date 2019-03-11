@@ -5,6 +5,10 @@ html, body {
     padding: 0;
 }
 
+.hidden {
+  display: none;  
+}
+
 hp-content {
     display: flex;
     width: 100vw;
@@ -186,4 +190,9 @@ hp-learn-yes {
     }
 }
 
+path {
+    fill: none;
+    stroke: #0f0;
+    stroke-width: 1.5vmin;
+}
 

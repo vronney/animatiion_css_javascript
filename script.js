@@ -77,3 +77,25 @@ function startLearning(learningDelay) {
 function runLearningSequence() {
     startLearning(1500);
 }
+
+function animateSVGStep() {
+    var slide = document.querySelector('hp-slide.active');
+
+    var svgs = slide.querySelectorAll('svg');
+
+    if (svgs[0].children.length > 0) {
+        var el = svgs[0].children[0];
+
+        if (el) {
+            svgs[1].appendChild(el.parentNode.removeChild(el));
+        }
+        return true;
+    }
+    return false;
+}
+
+function animateSVG() {
+    if (animateSVGStep()) {
+        setTimeout(animateSVG, 30);
+    }
+}
