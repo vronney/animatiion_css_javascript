@@ -22,7 +22,7 @@ hp-presentation > hp-slide {
 }
 
 hp-presentation > hp-slide.active {
-    display: inline-block;
+    display: flex;
 }
 
 hp-presentation {
@@ -34,7 +34,10 @@ hp-presentation {
 }
 
 hp-slide {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
     width: 80%;
     height: 80%;
     margin: 10%;
